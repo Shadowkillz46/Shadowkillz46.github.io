@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@font-face {
+  font-family: type;
+  src: url();
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+@font-face {
+  font-family: "font";
+  src: url("font.ttf");
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  z-index: 10;
+}
+
+header .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar .logo {
+  color: #fff;
+  font-weight: 900;
+  font-size: 2.4rem;
+  text-decoration: none;
+  letter-spacing: 7px;
+  z-index: 10;
+  font-family: 'font';
+}
+
+
+.navbar .logo span {
+  color: #438ff9;
+}
+
+.navbar .menu-links {
+  display: flex;
+  list-style: none;
+  gap: 35px;
+  z-index: 10;
+
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.6s ease
+}
+
+.navbar a:hover {
+  color: #438ff9;
+}
+
+.plextext {
+  height: 100vh;
+  background-image: url("images/background.png");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.plextext .content {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  color: #fff;
+}
+
+.plextext .content h2 {
+  font-size: 5rem;
+  max-width: 600px;
+  line-height: 70px;
+  font-family: 'font';
+  letter-spacing: 5px;
+}
+
+
+.plextext .content p {
+  font-weight: 300;
+  max-width: 600px;
+  margin-top: 15px;
+}
+
+.plextext .content button {
+  background: #fff;
+  padding: 12px 30px;
+  border: none;
+  font-size: 22px;
+  border-radius: 6px;
+  margin-top: 38px;
+  cursor: pointer;
+  font-weight: 500;
+  font-family: 'font';
+  letter-spacing: 2px;
+  font-weight: 1000;
+  transition: 0.5s ease;
+}
+
+.plextext .content button:hover {
+  color: #fff;
+  background: #0c4ba4;
+}
+
+#close-menu-btn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+  display: none;
+}
+
+#hamburger-btn {
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 10px;
+  }
+
+  header.show-mobile-menu::before {
+    content: "";
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    z-index: 9;
+  }
+
+  .navbar .logo {
+    font-size: 1.7rem;
+  }
+
+  #hamburger-btn, #close-menu-btn {
+    display: block;
+    color: #fff;
+  }
+
+  .navbar .menu-links {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    background: #000000;
+    flex-direction: column;
+    padding: 70px 40px 0;
+    transition: left 0.2s ease;
+    z-index: 10; 
+  }
+
+  header.show-mobile-menu .navbar .menu-links {
+    left: 0;
+  }
+
+  .navbar a {
+    color: #fff;
+  }
+
+  .plextext .content {
+    text-align: center;
+  }
+
+  .plextext .content :is(h2, p) {
+    max-width: 100%;
+  }
+
+  .plextext .content h2 {
+    font-size: 2.3rem;
+    line-height: 60px;
+  }
+
+  .plextext .content button {
+    padding: 9px 18px;
+  }
+}

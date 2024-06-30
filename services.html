@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlexNodes</title>
+    <link rel="stylesheet" href="services.css">
+    <link rel="icon" href="images/newlogo.png" type="image/x-icon"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://kit.fontawesome.com/ecf1381d1b.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a class="logo" href="#">PlexNodes<span>.</span></a>
+        <ul class="menu-links">
+          <span id="close-menu-btn" class="material-symbols-outlined">close</span>
+          <li><a href="index.html"><b>Home</b></a></li>
+          <li><a href="#"><b>Services</b></a></li>
+          <li><a href="https://billing.plexnodes.xyz/"><b>Client</b></a></li>
+          <li><a href="https://panel.plexnodes.xyz/"><b>Panel</b></a></li>
+          <li><a href="https://discord.gg/QbcxbucVES"><b>Contact us</b></a></li>
+        </ul>
+        <span id="hamburger-btn" class="material-symbols-outlined">menu</span>
+      </nav>
+    </header>
+
+
+
+    <div class="container">
+        <h1>Our Services</h1>
+        <div class="row">
+            <div class="service">
+                <i class="fa-solid fa-2"></i>
+                <h2>Free/Paid Hosting</h2>
+                <p>We Are Both Free And Paid Hosting.</p>
+            </div>
+
+            <div class="service">
+                <i class="fa-solid fa-angles-up"></i>
+                <h2>24/7</h2>
+                <p>At Our Host Your Servers Run 24/7 After You Hit Start.</p>
+            </div>
+
+            <div class="service">
+                <i class="fa-solid fa-wallet"></i>
+                <h2>Reasonable Prices</h2>
+                <p>At Our Host You Wont Find An Unreasonable Price.</p>
+            </div>
+
+            <div class="service">
+                <i class="fa-solid fa-cube"></i>
+                <h2>Minecraft Hosting</h2>
+                <p>At Our Host We Provide Minecraft Servers.</p>
+            </div>
+
+            <div class="service">
+                <i class="fa-solid fa-code"></i>
+                <h2>Code & Website Hosting</h2>
+                <p>At Our Host We Also Provide Code And Website Servers.</p>
+            </div>
+
+            <div class="service">
+                <i class="fa-solid fa-server"></i>
+                <h2>VPS/VDS Hosting</h2>
+                <p>At Our Host We Also Provide You With VPS/VDS Servers.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        ScrollReveal({
+          reset: true,
+          distance: '60px',
+          duration: 2500,
+          delay: 400
+        });
+        ScrollReveal().reveal('.container', {origin: 'bottom', delay: '700'});         
+      </script>
+
+    <script>
+      const header = document.querySelector("header");
+      const hamburgerBtn = document.querySelector("#hamburger-btn");
+      const closeMenuBtn = document.querySelector("#close-menu-btn");
+
+      hamburgerBtn.addEventListener("click", () => header.classList.toggle("show-mobile-menu"));
+
+      closeMenuBtn.addEventListener("click", () => hamburgerBtn.click());
+    </script>
+    
+  </body>
+</html>
