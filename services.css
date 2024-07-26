@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 
 * {
   margin: 0;
@@ -88,7 +89,7 @@ header .navbar {
   margin-bottom: 60px;
   font-weight: 900;
   position: relative;
-  font-family: 'font';
+  font-family: "Share Tech Mono", monospace;
   letter-spacing: 3px;
 }
 
